@@ -7,6 +7,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static int[] generateRandomArray() {
@@ -45,5 +46,18 @@ public class Main {
             summ += array[i];
         averageValue = (double) summ / array.length;
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей%n%n", averageValue);
+    }
+
+    public static void task4() {
+        System.out.println("Задание 4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char buffer;
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            buffer = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - i - 1];
+            reverseFullName[reverseFullName.length - i - 1] = buffer;
+        }
+        for (char x : reverseFullName)
+            System.out.print(x);
     }
 }
